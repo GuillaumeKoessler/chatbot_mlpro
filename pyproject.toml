@@ -7,10 +7,11 @@ authors = [
 ]
 license = {text = "Apache V2.0"}
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<4.0"
 dependencies = [
     "openai (>=1.65.5,<2.0.0)",
-    "dotenv (>=0.9.9,<0.10.0)"
+    "dotenv (>=0.9.9,<0.10.0)",
+    "langchain-openai (>=0.3.8,<0.4.0)"
 ]
 
 
