@@ -4,17 +4,23 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 
+from prompts import poesie
+
 # Load environment variables from .env file
+
 load_dotenv()
 
-prompt_template = """Réécris ce message de manière poétique : {message_fr}"""
-prompt = PromptTemplate(template=prompt_template, input_variables=['message_fr'])
 
-llm = ChatOpenAI(
-    api_key=os.environ.get('API_KEY_OPENAI'),
-    model=os.environ.get("MODEL_ID"),
-    temperature=0.2
-)
-chain = prompt | llm 
+def transf_phrase_vers(phrase: str) -> str:
+    """ """
+    prompt_template = poesie.PROMPT_VERS
+    prompt = PromptTemplate(template=prompt_template, input_variables=["phrase"])
 
-print(chain.invoke("Salut, t'es jolie aujourd'hui, on dirait une fleur"))
+    llm = ChatOpenAI(
+        api_key=os.environ.get("API_KEY_OPENAI"),
+        model=os.environ.get("MODEL_ID"),
+        temperature=0.2,
+    )
+    chain = prompt | llm
+
+    return chain.invoke(phrase).content
