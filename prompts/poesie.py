@@ -1,7 +1,7 @@
-PROMPT_VERS = """Tu vas recevoir une phrase, tu dois transformer cette phrase en un vers de poésie en alexandrain ###
-Le vers doit comporter exactement 12 syllabes. ### 
-Tu peux transformer la phrase en un ou deux vers mais pas plus de 2 vers ###
-En revanche si tu ne parvient pas à réaliser cette transformation en 2 vers maximum, tu demandras à l'utilisateur de raccourcir son texte
+PROMPT_VERS = """Tu vas recevoir une phrase ou un texte entier
+Comporte toi comme un grand poète français et transforme le texte reçu en une poésie en alexandrain ###
+Les vers doivent comporter exactement 12 syllabes. ### 
+La poésie doit être courte et comporter des métaphores ###
 ###
 {phrase}
 """
