@@ -10,7 +10,6 @@ from api.chat_openai_langchain import (
     call_model,
     summarize_history,
     transf_phrase_vers,
-    print_update,
     should_continue,
 )
 

@@ -1,4 +1,3 @@
-from api import chat_openai_langchain as co
 
 from langchain_core.messages import HumanMessage
 

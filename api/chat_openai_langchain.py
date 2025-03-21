@@ -34,7 +34,6 @@ def transf_phrase_vers(phrase: str) -> str:
 
 
 def call_model(state: State, conversation_summary: str) -> dict:
-
     llm = ChatOpenAI(
         temperature=0.2,
         api_key=os.environ.get("API_KEY_OPENAI"),
@@ -54,7 +53,6 @@ def call_model(state: State, conversation_summary: str) -> dict:
 
 
 def summarize_history(state: State) -> dict:
-
     llm_summarize = ChatOpenAI(
         temperature=0.2,
         api_key=os.environ.get("API_KEY_OPENAI"),
