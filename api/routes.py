@@ -13,6 +13,7 @@ from api.chat_openai_langchain import (
     should_continue,
 )
 
+
 app = FastAPI()
 
 chain = None
@@ -43,7 +44,7 @@ async def init_conv(file: UploadFile = File(...)):
     content = await file.read()
     text = content.decode("utf-8")
 
-    poem = transf_phrase_vers(text)
+    poem = text
 
     workflow = StateGraph(State)
     workflow.add_node(
